@@ -34,6 +34,10 @@ h1, h2 {
     margin: 0;
 }
 
+p {
+    margin: 0;
+}
+
 a {
     color: #D9D9D9;
     text-decoration: none;
@@ -220,3 +224,120 @@ a:hover {
 .welcome__img {
     width: 470px;
 }
+
+/*----------
+    BENEFITS
+----------*/
+
+.benefits {
+    margin-top: 80px;
+}
+
+.benefits .container {
+    position: relative;
+    max-width: 1030px;
+    padding-top: 55px;
+    padding-bottom: 25px;
+    border-radius: 46px;
+    background: linear-gradient(230deg, #fff 3.94%, #e5e5e5 64.08%, #fbfbfb 88.62%);
+    display: flex;
+    justify-content: space-around;
+}
+
+.benefits__container::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50px;
+    z-index: -5;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background: linear-gradient(245deg, rgba(35, 114, 73, 0.55) 0%, rgba(53, 198, 107, 0.73) 51.85%);
+    filter: blur(100px);
+}
+
+.benefits__container::after {
+    content: 'we\Ahave';
+    white-space: pre-wrap;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    background-image: url("images/icons/star.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 86%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.benefits__item {
+    max-width: 220px;
+    text-align: center;
+}
+
+.benefits__img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.benefits__img-wrapper::before {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background: linear-gradient(245deg, #237249 0%, #35c66b 100%);
+    box-shadow: 0 4px 41px 0 rgba(0, 0, 0, 0.39);
+}
+
+.benefits__icon {
+    width: 146px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+}
+
+.benefits__title {
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 32px;
+    color: #121517;
+}
+
+.benefits__desc {
+    line-height: 163%;
+    color: rgba(18, 21, 23, 0.9);
+}
+
+.benefits__heart {
+    top: calc(50% + 10px);
+    left: calc(50% + 5px);
+}
+
+.benefits__rocket {
+    width: 210px;
+    top: calc(50% + 10px);
+    left: calc(50% - 10px);
+}
+
+.benefits__money {
+    width: 210px;
+}
+
