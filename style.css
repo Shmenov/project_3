@@ -264,6 +264,17 @@ a:hover, button:hover {
 
 .welcome__img {
     width: 470px;
+    animation: moveCup 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes moveCup {
+    0% {
+        transform: none;
+    }
+
+    100% {
+        transform: translateY(-40px);
+    }
 }
 
 /*----------
@@ -660,5 +671,145 @@ a:hover, button:hover {
 }
 
 /*----------
-    ???
+    CONTACTS
 ----------*/
+.contacts {
+    margin-top: 130px;
+}
+
+.contacts .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts__text {
+    width: 390px;
+}
+
+.contacts__title {
+    margin-bottom: 50px;
+}
+
+.contacts__desc {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.contacts__desc::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    z-index: -5;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: linear-gradient(245deg, rgba(35, 114, 73, 0.55) 0%, rgba(53, 198, 107, 0.73) 51.85%);
+    filter: blur(90px);
+}
+
+.contacts__phone {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: 500;
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.contacts__phone::before {
+    content: '';
+    width: 45px;
+    height: 45px;
+    background-image: url(images/icons/phone.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.contacts__img-wrapper {
+    position: relative;
+}
+
+/*светлячок-вспышка*/
+.contacts__img-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: -50px;
+    z-index: -5;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    background: linear-gradient(245deg, rgba(35, 114, 73, 0.55) 0%, rgba(53, 198, 107, 0.73) 51.85%);
+    filter: blur(90px);
+}
+
+/*линии*/
+.contacts__img-wrapper::after {
+    content: '';
+    width: 920px;
+    height: 670px;
+    position: absolute;
+    z-index: -15;
+    right: -245px;
+    bottom: -360px;
+    background-image: url("images/icons/lines.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: rotate(17deg);
+}
+
+.contacts__img-inner-wrapper {
+    position: relative;
+    padding-right: 35px;
+}
+
+/*подложка - прямоугольник*/
+.contacts__img-inner-wrapper::before {
+    content: '';
+    width: calc(100% - 35px);
+    height: 100%;
+    background: #237249;
+    position: absolute;
+    z-index: -10;
+    bottom: -25px;
+    right: 0;
+    clip-path: polygon(30% 0%, 100% 0, 100% 100%, 0 100%, 0% 26%);
+}
+
+/*текст we have*/
+.contacts__img-inner-wrapper::after {
+    content: 'we\Ahave';
+    white-space: pre-wrap;
+    position: absolute;
+    top: 55px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    width: 250px;
+    height: 250px;
+    font-weight: 500;
+    font-size: 38px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    background-image: url(images/icons/star.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    line-height: 86%;
+}
+
+.contacts__img {
+    width: 350px;
+    clip-path: polygon(30% 0%, 100% 0, 100% 100%, 0 100%, 0% 26%);
+}
+
+/*----------
+    FOOTER
+----------*/
+
